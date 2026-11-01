@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-slate-100 text-slate-800 antialiased; }
+
+.input { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100; }
+.label { @apply mb-1 block text-xs font-medium text-slate-500; }
+.tbl { @apply w-full text-sm; }
+.tbl th { @apply bg-slate-50 px-3 py-2.5 text-right text-xs font-semibold text-slate-500 whitespace-nowrap; }
+.tbl td { @apply border-t border-slate-100 px-3 py-2.5 whitespace-nowrap; }
+.tbl tbody tr:hover { @apply bg-brand-50/40; }
+
+@media print {
+  aside, header, .no-print { display: none !important; }
+  main { padding: 0 !important; }
+}
